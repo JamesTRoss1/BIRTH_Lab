@@ -1,55 +1,86 @@
 from pyfirmata import Arduino, util
-
+import time 
+import traceback
+import os 
 def start(path):
     board = Arduino(str(path))
-    it = util.Iterator(board)
-    it.start()
     return board 
 
-def read(channel, board):
+def read(pin, board):
     try:
-        data = board.get_pin(str(channel))
-        return str(data.read())
+        data = pin.read()
+        return str(data) 
     except Exception:
+        traceback.print_exc()
         return "Unable to read data from Arduino"
-def write(channel, message, board):
+        
+def write(message, board, pin):
     try:
-        pin = board.get_pin(str(channel))
-        pin.write(int(str(message)))
+        pin.write(float(str(message)))
         return "Successfully wrote data to Arduino"
     except Exception:
-        return "Unable to write data to Arduino"
-        
+    	traceback.print_exc()
 #This method takes a channelA and channelB to listen on; if there is a change it records the change as either a 1 or -1. No change is defined as a 0. 
 #Takes optional parameter to define aLastState
 #Returns two integers with the first being the rotation and the second being a counter 
-def readPosition(channelA, channelB, counter = 0, aLastState = None, board = None):
-    aState = int(read(str(channelA)))
+def readPosition(channelA, channelB, counter = 0, aLastState = None, board = None, bLastState = None, direction = None):
+    aState = str(read(channelA, board))
+    bState = str(read(channelB, board))
     #Not Updated
     try:
-        if(aState == aLastState):
-            return 0 + counter
-        #Updated  
-        else:
-            #Rotating Clockwise; defined as 1 
-            if(aState != int(read(str(channelB), board))):
-                return 1 + counter
-            #Rotating Counterclockwise if equal; defined as -1
-            else: 
-                return -1 + counter
+        if(aState != aLastState or bState != bLastState):
+        	if int(direction) == 1:
+          		counter = counter + 1
+            if int(direction) == 0:
+          	   counter = counter - 1
     except Exception:
         pass  
     finally: 
-        aLastState = int(read(str(channelA), board))
+        aLastState = str(read(channelA, board))
+        bLastState = str(read(channelB, board))
+        return aLastState, bLastState, counter
 #Motor Control
-def controlMotor(channelA, channelB, writeChannel, message, numberOfCounts = None, counter = 0, revolution = None, board = None):
+#pin 2 and 3 encoder; input; digital
+def controlMotor(channelA, channelB, writeChannel, message, numberOfCounts = None, counter = 0, revolution = None, board = None, direct):
     #Has not reached desired rotation
-    fullCycle = 34607
-    if numberOfCounts == None: 
+    fullCycle = 34607 / 2
+    counter = 0
+    isDone = False
+    aLastState = None
+    bLastState = None
+    direction = direct
+    if numberOfCounts is None: 
         numberOfCounts = float(revolution) * fullCycle  
-    if counter < numberOfCounts:
-        counter = readPosition(channelA=channelA, channelB= channelB, counter=counter, board=board)
-    #Reached Desired Rotation
-    else:
-        write(str(writeChannel), int(message), board)
-
+        print(numberOfCounts)
+    print(str(counter))
+    while not(isDone):
+    	if abs(counter) >= numberOfCounts:
+		    write(str(message), board, writeChannel)
+		    isDone = True
+    	if counter < numberOfCounts:
+		    aLastState, bLastState, counter = readPosition(channelA=channelA, channelB= channelB,counter=counter, board=board, aLastState = aLastState, bLastState = bLastState, direction = direction)
+		    print(str(counter))
+		    time.sleep(.01)
+for i in range(0, 100000):
+	print(str(i))
+board = start("/dev/ttyACM1")
+print("Done")
+it = util.Iterator(board)
+it.start()
+pin_dir = board.get_pin(str("d:9:p"))
+speed = board.get_pin(str("d:10:p")) 
+pin_a_encoder = board.get_pin(str("d:2:i"))
+print("3")
+pin_b_encoder = board.get_pin(str("d:3:i"))
+print("4")
+write("0", board, pin_dir)
+print("5")
+write("0", board, speed) 
+print("6")
+time.sleep(2)
+write("1", board, pin_dir)
+direct = 1
+print("7")
+write("1", board, speed)
+print("8") 
+controlMotor(pin_a_encoder, pin_b_encoder, speed, "0", None, None, 1, board, direct)
