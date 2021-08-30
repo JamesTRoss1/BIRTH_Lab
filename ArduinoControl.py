@@ -1,7 +1,9 @@
-from pyfirmata import Arduino, util
+from pyfirmata import Arduino, util, Board, Pin
 import time 
 import traceback
 import os 
+
+board = None
 def start(path):
     board = Arduino(str(path))
     return board 
@@ -39,7 +41,7 @@ def readPosition(channelA, channelB, counter = 0, aLastState = None, board = Non
         return aLastState, bLastState, counter
 #Motor Control
 #pin 2 and 3 encoder; input; digital
-def controlMotor(channelA, channelB, writeChannel, message, numberOfCounts = None, counter = 0, revolution = None, board = None, direct = None):
+def controlMotor(channelA, channelB, writeSpeedChannel, writeDirChannel, InitialSpeedMessage, FinalSpeedMessage, InitialDirMessage, FinalDirMessage, numberOfCounts = None, counter = 0, revolution = None, board = None, direct = None):
     #Has not reached desired rotation
     fullCycle = 34607 / 2
     counter = 0
@@ -53,24 +55,42 @@ def controlMotor(channelA, channelB, writeChannel, message, numberOfCounts = Non
     print(str(counter))
     while not(isDone):
     	if abs(counter) >= numberOfCounts:
-		    write(str(message), board, writeChannel)
-		    isDone = True
+            write(str(FinalSpeedMessage), board, writeSpeedChannel)
+            write(str(FinalDirMessage), board, writeDirChannel)
+            isDone = True
     	if counter < numberOfCounts:
-		    aLastState, bLastState, counter = readPosition(channelA=channelA, channelB= channelB,counter=counter, board=board, aLastState = aLastState, bLastState = bLastState, direction = direction)
-		    print(str(counter))
-		    time.sleep(.01)
-board = start("/dev/ttyACM1")
-print("Board Connected")
-it = util.Iterator(board)
-it.start()
-pin_dir = board.get_pin(str("d:9:p"))
-speed = board.get_pin(str("d:10:p")) 
-pin_a_encoder = board.get_pin(str("d:2:i"))
-pin_b_encoder = board.get_pin(str("d:3:i"))
-write("0", board, pin_dir)
-write("0", board, speed) 
-time.sleep(2)
-write("1", board, pin_dir)
-direct = 1
-write("1", board, speed)
-controlMotor(pin_a_encoder, pin_b_encoder, speed, "0", None, None, 1, board, direct)
+            if counter == 0:
+                write(str(InitialDirMessage), board, writeDirChannel)
+                write(str(InitialSpeedMessage), board, writeSpeedChannel)
+            aLastState, bLastState, counter = readPosition(channelA=channelA, channelB= channelB,counter=counter, board=board, aLastState = aLastState, bLastState = bLastState, direction = direction)
+            print(str(counter))
+            time.sleep(.01)
+def arduino():
+    global board
+    board = start("/dev/ttyACM1")
+    it = util.Iterator(board)
+    it.start()
+	#pin_dir = board.get_pin(str("d:9:p"))
+	#speed = board.get_pin(str("d:10:p")) 
+	#pin_a_encoder = board.get_pin(str("d:2:i"))
+	#pin_b_encoder = board.get_pin(str("d:3:i"))
+    #pins = [speed, pin_dir, pin_a_encoder, pin_b_encoder]
+    #return board, pins
+def startPins():
+    global board 
+    pin_dir = Pin(board, "9", type="DIGITAL")
+    pin_dir.mode = "PWM"
+    speed = Pin(board, "10", type="DIGITAL")
+    speed.mode = "PWM"
+    pin_a_encoder = Pin(board, "10", type="DIGITAL")
+    pin_a_encoder.mode = "INPUT"
+    pin_a_encoder.enable_reporting()
+    pin_b_encoder = Pin(board, "2", type="DIGITAL")
+    pin_b_encoder.mode = "INPUT"
+    pin_b_encoder.enable_reporting()
+    pins = [speed, pin_dir, pin_a_encoder, pin_b_encoder]
+    return pins 
+
+arduino()
+pins = startPins()
+controlMotor(pins[2], pins[3], pins[0], pins[1], "1", "0", "1", "0", None, None, 1, board, "1")
