@@ -73,9 +73,13 @@ def initialize():
     pin_a_encoder = board.get_pin(str("d:2:i"))
     pin_b_encoder = board.get_pin(str("d:3:i"))
 #0 is counter clockwise; 1 is clockwise 
+initialize()
+speedVar = None
+print("Done")
 speedVar = str(input("Speed: ")).strip()
 dirVar = str(input("Direction: ")).strip()
-initialize()
+rotation = str(input("Rotation: ")).strip()
 write(speedVar, board, speed)
 write(dirVar, board, pin_dir)
-controlMotor(pin_a_encoder, pin_b_encoder, speed, "0", None, None, 1, board, int(dirVar))
+#29.7 cm in 35.6/4 seconds at full power
+controlMotor(pin_a_encoder, pin_b_encoder, speed, "0", None, None, float(rotation), board, int(dirVar))
