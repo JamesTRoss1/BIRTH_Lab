@@ -7,6 +7,16 @@ pin_dir = None
 speed = None 
 pin_a_encoder = None
 pin_b_encoder = None
+load_cell = None
+
+def getLoadCell():
+    global load_cell
+    return load_cell
+
+def getBoard():
+    global board
+    return board 
+
 def start(path):
     board = Arduino(str(path))
     return board 
@@ -57,14 +67,15 @@ def controlMotor(channelA, channelB, writeChannel, message, numberOfCounts = Non
     if numberOfCounts is None: 
         numberOfCounts = float(revolution) * fullCycle  
     while not(isDone):
-    	if abs(counter) >= numberOfCounts:
+        print(str(read(getLoadCell(), getBoard())))
+        if abs(counter) >= numberOfCounts:
             write(str(message), board, writeChannel)
             isDone = True
-    	if counter < numberOfCounts:
+        if counter < numberOfCounts:
             aLastState, bLastState, counter = readPosition(channelA=channelA, channelB= channelB,counter=counter, board=board, aLastState = aLastState, bLastState = bLastState, direction = direction)
             print(str(counter))
 def initialize():
-    global board, pin_dir, speed, pin_a_encoder, pin_b_encoder
+    global board, pin_dir, speed, pin_a_encoder, pin_b_encoder, load_cell
     board = start("/dev/ttyACM0")
     it = util.Iterator(board)
     it.start()
@@ -72,6 +83,7 @@ def initialize():
     speed = board.get_pin(str("d:10:p")) 
     pin_a_encoder = board.get_pin(str("d:2:i"))
     pin_b_encoder = board.get_pin(str("d:3:i"))
+    load_cell = board.get_pin(str("a:0:i"))
 #0 is counter clockwise; 1 is clockwise 
 initialize()
 speedVar = None

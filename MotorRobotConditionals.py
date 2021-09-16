@@ -1,6 +1,6 @@
 #file determines if motor has to activate to correct path errors 
 #Written By James Ross 
-
+import DAC_Control1
 #Distance away from needle
 robotDistance = None
 #Distance of rope dispensed 
@@ -12,6 +12,7 @@ desiredTension = None
 
 def main():
     #determines how much to move by in given cycle 
+    load_cell = DAC_Control1.getLoadCell()
     robot_correction = 1
     #determines the range of values allowed  
     robot_precision = 1
