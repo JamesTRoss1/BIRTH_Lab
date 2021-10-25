@@ -1,0 +1,59 @@
+[0.048s] Invoking command in '/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jtross9/workspace/ros_ur_driver/install/position:/home/jtross9/workspace/ros_ur_driver/install/ros2controlcli:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_test_nodes:/opt/ros/galactic /usr/bin/cmake /home/jtross9/workspace/ros_ur_driver/src/mover -DCMAKE_INSTALL_PREFIX=/home/jtross9/workspace/ros_ur_driver/src/mover/install/mover
+[1.355s] -- The C compiler identification is GNU 9.3.0
+[2.136s] -- The CXX compiler identification is GNU 9.3.0
+[2.200s] -- Check for working C compiler: /usr/bin/cc
+[2.327s] -- Check for working C compiler: /usr/bin/cc -- works
+[2.329s] -- Detecting C compiler ABI info
+[2.436s] -- Detecting C compiler ABI info - done
+[2.450s] -- Detecting C compile features
+[2.450s] -- Detecting C compile features - done
+[2.454s] -- Check for working CXX compiler: /usr/bin/c++
+[2.551s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.552s] -- Detecting CXX compiler ABI info
+[2.643s] -- Detecting CXX compiler ABI info - done
+[2.655s] -- Detecting CXX compile features
+[2.655s] -- Detecting CXX compile features - done
+[2.785s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[2.890s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.890s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.170s] -- Found rclcpp: 9.1.0 (/opt/ros/galactic/share/rclcpp/cmake)
+[3.691s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.725s] -- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[4.439s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[4.494s] -- Found FastRTPS: /opt/ros/galactic/include  
+[4.676s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.850s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[4.863s] -- Found rmw_cyclonedds_cpp: 0.22.3 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[4.900s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[4.913s] -- Looking for pthread.h
+[5.182s] -- Looking for pthread.h - found
+[5.182s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.305s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[5.306s] -- Looking for pthread_create in pthreads
+[5.432s] -- Looking for pthread_create in pthreads - not found
+[5.432s] -- Looking for pthread_create in pthread
+[5.535s] -- Looking for pthread_create in pthread - found
+[5.536s] -- Found Threads: TRUE  
+[5.830s] -- Found moveit: 2.3.0 (/home/jtross9/workspace/ros_ur_driver/install/moveit/share/moveit/cmake)
+[5.872s] -- Found moveit_msgs: 2.1.0 (/opt/ros/galactic/share/moveit_msgs/cmake)
+[7.485s] CMake Error at CMakeLists.txt:13 (find_package):
+[7.485s]   By not providing "Findmoveit_visual_tools.cmake" in CMAKE_MODULE_PATH this
+[7.485s]   project has asked CMake to find a package configuration file provided by
+[7.485s]   "moveit_visual_tools", but CMake did not find one.
+[7.485s] 
+[7.485s]   Could not find a package configuration file provided by
+[7.486s]   "moveit_visual_tools" with any of the following names:
+[7.486s] 
+[7.486s]     moveit_visual_toolsConfig.cmake
+[7.486s]     moveit_visual_tools-config.cmake
+[7.486s] 
+[7.486s]   Add the installation prefix of "moveit_visual_tools" to CMAKE_PREFIX_PATH
+[7.486s]   or set "moveit_visual_tools_DIR" to a directory containing one of the above
+[7.486s]   files.  If "moveit_visual_tools" provides a separate development package or
+[7.486s]   SDK, be sure it has been installed.
+[7.486s] 
+[7.486s] 
+[7.487s] -- Configuring incomplete, errors occurred!
+[7.487s] See also "/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover/CMakeFiles/CMakeOutput.log".
+[7.487s] See also "/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover/CMakeFiles/CMakeError.log".
+[7.494s] Invoked command in '/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jtross9/workspace/ros_ur_driver/install/position:/home/jtross9/workspace/ros_ur_driver/install/ros2controlcli:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_test_nodes:/opt/ros/galactic /usr/bin/cmake /home/jtross9/workspace/ros_ur_driver/src/mover -DCMAKE_INSTALL_PREFIX=/home/jtross9/workspace/ros_ur_driver/src/mover/install/mover

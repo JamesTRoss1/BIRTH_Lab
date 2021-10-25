@@ -1,0 +1,141 @@
+[0.000000] (-) TimerEvent: {}
+[0.000149] (mover) JobQueued: {'identifier': 'mover', 'dependencies': OrderedDict()}
+[0.000189] (mover) JobStarted: {'identifier': 'mover'}
+[0.046777] (mover) JobProgress: {'identifier': 'mover', 'progress': 'cmake'}
+[0.047082] (mover) Command: {'cmd': ['/usr/bin/cmake', '/home/jtross9/workspace/ros_ur_driver/src/mover', '-DCMAKE_INSTALL_PREFIX=/home/jtross9/workspace/ros_ur_driver/src/mover/install/mover'], 'cwd': '/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'jtross9'), ('SSH_AGENT_PID', '23123'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros_mongo/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_servo/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_visualization/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_planning_interface/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_benchmarks/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_warehouse/lib:/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros/lib:/home/jtross9/workspace/ros_ur_driver/install/velocity_controllers/lib:/home/jtross9/workspace/ros_ur_driver/install/ur_robot_driver/lib:/home/jtross9/workspace/ros_ur_driver/install/ur_controllers/lib:/home/jtross9/workspace/ros_ur_driver/install/ur_msgs/lib:/home/jtross9/workspace/ros_ur_driver/install/ur_dashboard_msgs/lib:/home/jtross9/workspace/ros_ur_driver/install/ur_client_library/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_control_interface/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_simple_controller_manager/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_robot_interaction/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_perception/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_move_group/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_planners_ompl/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_planning/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_occupancy_map_monitor/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_kinematics/lib:/home/jtross9/workspace/ros_ur_driver/install/moveit_core/lib:/home/jtross9/workspace/ros_ur_driver/install/srdfdom/lib:/home/jtross9/workspace/ros_ur_driver/install/controller_manager/lib:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_demo_hardware/lib:/home/jtross9/workspace/ros_ur_driver/install/position_controllers/lib:/home/jtross9/workspace/ros_ur_driver/install/joint_trajectory_controller/lib:/home/jtross9/workspace/ros_ur_driver/install/joint_state_broadcaster/lib:/home/jtross9/workspace/ros_ur_driver/install/imu_sensor_broadcaster/lib:/home/jtross9/workspace/ros_ur_driver/install/gripper_controllers/lib:/home/jtross9/workspace/ros_ur_driver/install/effort_controllers/lib:/home/jtross9/workspace/ros_ur_driver/install/forward_command_controller/lib:/home/jtross9/workspace/ros_ur_driver/install/force_torque_sensor_broadcaster/lib:/home/jtross9/workspace/ros_ur_driver/install/diff_drive_controller/lib:/home/jtross9/workspace/ros_ur_driver/install/controller_interface/lib:/home/jtross9/workspace/ros_ur_driver/install/hardware_interface/lib:/home/jtross9/workspace/ros_ur_driver/install/geometric_shapes/lib:/home/jtross9/workspace/ros_ur_driver/install/controller_manager_msgs/lib:/home/jtross9/workspace/ros_ur_driver/install/control_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/jtross9'), ('OLDPWD', '/home/jtross9/workspace/ros_ur_driver/src/mover/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '22948'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/jtross9/workspace/ros_ur_driver/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'jtross9'), ('JOURNAL_STREAM', '8:182936'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/jtross9/workspace/ros_ur_driver/install/ur_client_library/lib/x86_64-linux-gnu/pkgconfig:/home/jtross9/workspace/ros_ur_driver/install/ur_client_library/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jtross9'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/jtross9/workspace/ros_ur_driver/install/rrbot_description/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/jtross9/workspace/ros_ur_driver/install/ur_robot_driver/bin:/home/jtross9/workspace/ros_ur_driver/install/moveit_kinematics/bin:/home/jtross9/workspace/ros_ur_driver/install/moveit_core/bin:/opt/ros/galactic/bin:/home/jtross9/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/en4113304:@/tmp/.ICE-unix/23167,unix/en4113304:/tmp/.ICE-unix/23167'), ('INVOCATION_ID', '5109da76e20443cdb84bbe6c2f41a5ed'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/fffe5ac0_e8fd_4b7c_82c5_39e3b98fdb05'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1002/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.93'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jtross9/workspace/ros_ur_driver/install/run_ompl_constrained_planning:/home/jtross9/workspace/ros_ur_driver/install/run_moveit_cpp:/home/jtross9/workspace/ros_ur_driver/install/run_move_group:/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros_mongo:/home/jtross9/workspace/ros_ur_driver/install/position:/home/jtross9/workspace/ros_ur_driver/install/moveit_servo:/home/jtross9/workspace/ros_ur_driver/install/moveit_runtime:/home/jtross9/workspace/ros_ur_driver/install/moveit:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_visualization:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_planning_interface:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_benchmarks:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_warehouse:/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros:/home/jtross9/workspace/ros_ur_driver/install/ros2_controllers:/home/jtross9/workspace/ros_ur_driver/install/velocity_controllers:/home/jtross9/workspace/ros_ur_driver/install/ur_calibration:/home/jtross9/workspace/ros_ur_driver/install/ur_robot_driver:/home/jtross9/workspace/ros_ur_driver/install/ur_controllers:/home/jtross9/workspace/ros_ur_driver/install/ur_msgs:/home/jtross9/workspace/ros_ur_driver/install/ur_moveit_config:/home/jtross9/workspace/ros_ur_driver/install/ur_description:/home/jtross9/workspace/ros_ur_driver/install/ur_dashboard_msgs:/home/jtross9/workspace/ros_ur_driver/install/ur_bringup:/home/jtross9/workspace/ros_ur_driver/install/ros2_control:/home/jtross9/workspace/ros_ur_driver/install/transmission_interface:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_control_interface:/home/jtross9/workspace/ros_ur_driver/install/moveit_plugins:/home/jtross9/workspace/ros_ur_driver/install/moveit_simple_controller_manager:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_robot_interaction:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_perception:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_move_group:/home/jtross9/workspace/ros_ur_driver/install/moveit_planners:/home/jtross9/workspace/ros_ur_driver/install/moveit_planners_ompl:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_planning:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_occupancy_map_monitor:/home/jtross9/workspace/ros_ur_driver/install/moveit_kinematics:/home/jtross9/workspace/ros_ur_driver/install/moveit_core:/home/jtross9/workspace/ros_ur_driver/install/srdfdom:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_demos:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_demo_bringup:/home/jtross9/workspace/ros_ur_driver/install/rrbot_description:/home/jtross9/workspace/ros_ur_driver/install/ros2controlcli:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_test_nodes:/home/jtross9/workspace/ros_ur_driver/install/controller_manager:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_test_assets:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_demo_hardware:/home/jtross9/workspace/ros_ur_driver/install/position_controllers:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_pr2_description:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_panda_moveit_config:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_panda_description:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_fanuc_moveit_config:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_fanuc_description:/home/jtross9/workspace/ros_ur_driver/install/moveit_common:/home/jtross9/workspace/ros_ur_driver/install/joint_trajectory_controller:/home/jtross9/workspace/ros_ur_driver/install/joint_state_broadcaster:/home/jtross9/workspace/ros_ur_driver/install/imu_sensor_broadcaster:/home/jtross9/workspace/ros_ur_driver/install/gripper_controllers:/home/jtross9/workspace/ros_ur_driver/install/effort_controllers:/home/jtross9/workspace/ros_ur_driver/install/forward_command_controller:/home/jtross9/workspace/ros_ur_driver/install/force_torque_sensor_broadcaster:/home/jtross9/workspace/ros_ur_driver/install/diff_drive_controller:/home/jtross9/workspace/ros_ur_driver/install/controller_interface:/home/jtross9/workspace/ros_ur_driver/install/hardware_interface:/home/jtross9/workspace/ros_ur_driver/install/geometric_shapes:/home/jtross9/workspace/ros_ur_driver/install/diffbot_description:/home/jtross9/workspace/ros_ur_driver/install/controller_manager_msgs:/home/jtross9/workspace/ros_ur_driver/install/control_msgs:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros_mongo/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/position/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/ur_msgs/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/ur_dashboard_msgs/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/srdfdom/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/ros2controlcli/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_test_nodes/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/controller_manager/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/controller_manager_msgs/lib/python3.8/site-packages:/home/jtross9/workspace/ros_ur_driver/install/control_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/jtross9/workspace/ros_ur_driver/install/run_ompl_constrained_planning:/home/jtross9/workspace/ros_ur_driver/install/run_moveit_cpp:/home/jtross9/workspace/ros_ur_driver/install/run_move_group:/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros_mongo:/home/jtross9/workspace/ros_ur_driver/install/moveit_servo:/home/jtross9/workspace/ros_ur_driver/install/moveit_runtime:/home/jtross9/workspace/ros_ur_driver/install/moveit:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_visualization:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_planning_interface:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_benchmarks:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_warehouse:/home/jtross9/workspace/ros_ur_driver/install/warehouse_ros:/home/jtross9/workspace/ros_ur_driver/install/ros2_controllers:/home/jtross9/workspace/ros_ur_driver/install/velocity_controllers:/home/jtross9/workspace/ros_ur_driver/install/ur_calibration:/home/jtross9/workspace/ros_ur_driver/install/ur_robot_driver:/home/jtross9/workspace/ros_ur_driver/install/ur_controllers:/home/jtross9/workspace/ros_ur_driver/install/ur_msgs:/home/jtross9/workspace/ros_ur_driver/install/ur_moveit_config:/home/jtross9/workspace/ros_ur_driver/install/ur_description:/home/jtross9/workspace/ros_ur_driver/install/ur_dashboard_msgs:/home/jtross9/workspace/ros_ur_driver/install/ur_client_library:/home/jtross9/workspace/ros_ur_driver/install/ur_bringup:/home/jtross9/workspace/ros_ur_driver/install/ros2_control:/home/jtross9/workspace/ros_ur_driver/install/transmission_interface:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_control_interface:/home/jtross9/workspace/ros_ur_driver/install/moveit_plugins:/home/jtross9/workspace/ros_ur_driver/install/moveit_simple_controller_manager:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_robot_interaction:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_perception:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_move_group:/home/jtross9/workspace/ros_ur_driver/install/moveit_planners:/home/jtross9/workspace/ros_ur_driver/install/moveit_planners_ompl:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_planning:/home/jtross9/workspace/ros_ur_driver/install/moveit_ros_occupancy_map_monitor:/home/jtross9/workspace/ros_ur_driver/install/moveit_kinematics:/home/jtross9/workspace/ros_ur_driver/install/moveit_core:/home/jtross9/workspace/ros_ur_driver/install/srdfdom:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_demos:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_demo_bringup:/home/jtross9/workspace/ros_ur_driver/install/rrbot_description:/home/jtross9/workspace/ros_ur_driver/install/controller_manager:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_test_assets:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_demo_hardware:/home/jtross9/workspace/ros_ur_driver/install/position_controllers:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_pr2_description:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_panda_moveit_config:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_panda_description:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_fanuc_moveit_config:/home/jtross9/workspace/ros_ur_driver/install/moveit_resources_fanuc_description:/home/jtross9/workspace/ros_ur_driver/install/moveit_common:/home/jtross9/workspace/ros_ur_driver/install/joint_trajectory_controller:/home/jtross9/workspace/ros_ur_driver/install/joint_state_broadcaster:/home/jtross9/workspace/ros_ur_driver/install/imu_sensor_broadcaster:/home/jtross9/workspace/ros_ur_driver/install/gripper_controllers:/home/jtross9/workspace/ros_ur_driver/install/effort_controllers:/home/jtross9/workspace/ros_ur_driver/install/forward_command_controller:/home/jtross9/workspace/ros_ur_driver/install/force_torque_sensor_broadcaster:/home/jtross9/workspace/ros_ur_driver/install/diff_drive_controller:/home/jtross9/workspace/ros_ur_driver/install/controller_interface:/home/jtross9/workspace/ros_ur_driver/install/hardware_interface:/home/jtross9/workspace/ros_ur_driver/install/geometric_shapes:/home/jtross9/workspace/ros_ur_driver/install/diffbot_description:/home/jtross9/workspace/ros_ur_driver/install/controller_manager_msgs:/home/jtross9/workspace/ros_ur_driver/install/control_msgs:/home/jtross9/workspace/ros_ur_driver/install/position:/home/jtross9/workspace/ros_ur_driver/install/ros2controlcli:/home/jtross9/workspace/ros_ur_driver/install/ros2_control_test_nodes:/opt/ros/galactic')]), 'shell': False}
+[0.099559] (-) TimerEvent: {}
+[0.200652] (-) TimerEvent: {}
+[0.301235] (-) TimerEvent: {}
+[0.401830] (-) TimerEvent: {}
+[0.502473] (-) TimerEvent: {}
+[0.603224] (-) TimerEvent: {}
+[0.703809] (-) TimerEvent: {}
+[0.804383] (-) TimerEvent: {}
+[0.904935] (-) TimerEvent: {}
+[1.005472] (-) TimerEvent: {}
+[1.106056] (-) TimerEvent: {}
+[1.206644] (-) TimerEvent: {}
+[1.307236] (-) TimerEvent: {}
+[1.354522] (mover) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[1.407415] (-) TimerEvent: {}
+[1.507975] (-) TimerEvent: {}
+[1.608544] (-) TimerEvent: {}
+[1.709122] (-) TimerEvent: {}
+[1.809786] (-) TimerEvent: {}
+[1.910474] (-) TimerEvent: {}
+[2.011050] (-) TimerEvent: {}
+[2.111605] (-) TimerEvent: {}
+[2.136026] (mover) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[2.199732] (mover) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[2.211771] (-) TimerEvent: {}
+[2.312111] (-) TimerEvent: {}
+[2.327220] (mover) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[2.328797] (mover) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.412235] (-) TimerEvent: {}
+[2.436126] (mover) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.449693] (mover) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.450274] (mover) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.453797] (mover) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.512350] (-) TimerEvent: {}
+[2.550788] (mover) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.551887] (mover) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.612470] (-) TimerEvent: {}
+[2.643170] (mover) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.654913] (mover) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.655517] (mover) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.712642] (-) TimerEvent: {}
+[2.785231] (mover) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[2.812800] (-) TimerEvent: {}
+[2.890256] (mover) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[2.890536] (mover) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.912898] (-) TimerEvent: {}
+[3.013127] (-) TimerEvent: {}
+[3.113448] (-) TimerEvent: {}
+[3.169719] (mover) StdoutLine: {'line': b'-- Found rclcpp: 9.1.0 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[3.213594] (-) TimerEvent: {}
+[3.314127] (-) TimerEvent: {}
+[3.414667] (-) TimerEvent: {}
+[3.515212] (-) TimerEvent: {}
+[3.615831] (-) TimerEvent: {}
+[3.690877] (mover) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.715915] (-) TimerEvent: {}
+[3.725201] (mover) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.1 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[3.816190] (-) TimerEvent: {}
+[3.916761] (-) TimerEvent: {}
+[4.017327] (-) TimerEvent: {}
+[4.117883] (-) TimerEvent: {}
+[4.218373] (-) TimerEvent: {}
+[4.318908] (-) TimerEvent: {}
+[4.419484] (-) TimerEvent: {}
+[4.438945] (mover) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[4.494324] (mover) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/galactic/include  \n'}
+[4.519645] (-) TimerEvent: {}
+[4.619971] (-) TimerEvent: {}
+[4.676148] (mover) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.720113] (-) TimerEvent: {}
+[4.820418] (-) TimerEvent: {}
+[4.850101] (mover) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[4.863226] (mover) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.3 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[4.899693] (mover) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[4.913302] (mover) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.920515] (-) TimerEvent: {}
+[5.020831] (-) TimerEvent: {}
+[5.121434] (-) TimerEvent: {}
+[5.182247] (mover) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[5.182535] (mover) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[5.221542] (-) TimerEvent: {}
+[5.305467] (mover) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[5.305702] (mover) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[5.321654] (-) TimerEvent: {}
+[5.421931] (-) TimerEvent: {}
+[5.431695] (mover) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[5.432048] (mover) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[5.522046] (-) TimerEvent: {}
+[5.535399] (mover) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[5.536482] (mover) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.622226] (-) TimerEvent: {}
+[5.722496] (-) TimerEvent: {}
+[5.822797] (-) TimerEvent: {}
+[5.829416] (mover) StdoutLine: {'line': b'-- Found moveit: 2.3.0 (/home/jtross9/workspace/ros_ur_driver/install/moveit/share/moveit/cmake)\n'}
+[5.871663] (mover) StdoutLine: {'line': b'-- Found moveit_msgs: 2.1.0 (/opt/ros/galactic/share/moveit_msgs/cmake)\n'}
+[5.922944] (-) TimerEvent: {}
+[6.023353] (-) TimerEvent: {}
+[6.123755] (-) TimerEvent: {}
+[6.223978] (-) TimerEvent: {}
+[6.324258] (-) TimerEvent: {}
+[6.424544] (-) TimerEvent: {}
+[6.524769] (-) TimerEvent: {}
+[6.625022] (-) TimerEvent: {}
+[6.725298] (-) TimerEvent: {}
+[6.825542] (-) TimerEvent: {}
+[6.925791] (-) TimerEvent: {}
+[7.026091] (-) TimerEvent: {}
+[7.126348] (-) TimerEvent: {}
+[7.226587] (-) TimerEvent: {}
+[7.326820] (-) TimerEvent: {}
+[7.427054] (-) TimerEvent: {}
+[7.485227] (mover) StderrLine: {'line': b'CMake Error at CMakeLists.txt:13 (find_package):\n'}
+[7.485393] (mover) StderrLine: {'line': b'  By not providing "Findmoveit_visual_tools.cmake" in CMAKE_MODULE_PATH this\n'}
+[7.485464] (mover) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[7.485527] (mover) StderrLine: {'line': b'  "moveit_visual_tools", but CMake did not find one.\n'}
+[7.485591] (mover) StderrLine: {'line': b'\n'}
+[7.485650] (mover) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[7.485708] (mover) StderrLine: {'line': b'  "moveit_visual_tools" with any of the following names:\n'}
+[7.485766] (mover) StderrLine: {'line': b'\n'}
+[7.485823] (mover) StderrLine: {'line': b'    moveit_visual_toolsConfig.cmake\n'}
+[7.485881] (mover) StderrLine: {'line': b'    moveit_visual_tools-config.cmake\n'}
+[7.485938] (mover) StderrLine: {'line': b'\n'}
+[7.485995] (mover) StderrLine: {'line': b'  Add the installation prefix of "moveit_visual_tools" to CMAKE_PREFIX_PATH\n'}
+[7.486053] (mover) StderrLine: {'line': b'  or set "moveit_visual_tools_DIR" to a directory containing one of the above\n'}
+[7.486110] (mover) StderrLine: {'line': b'  files.  If "moveit_visual_tools" provides a separate development package or\n'}
+[7.486166] (mover) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[7.486223] (mover) StderrLine: {'line': b'\n'}
+[7.486279] (mover) StderrLine: {'line': b'\n'}
+[7.487249] (mover) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[7.487352] (mover) StdoutLine: {'line': b'See also "/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover/CMakeFiles/CMakeOutput.log".\n'}
+[7.487421] (mover) StdoutLine: {'line': b'See also "/home/jtross9/workspace/ros_ur_driver/src/mover/build/mover/CMakeFiles/CMakeError.log".\n'}
+[7.494171] (mover) CommandEnded: {'returncode': 1}
+[7.527310] (-) TimerEvent: {}
+[7.627744] (-) TimerEvent: {}
+[7.705748] (mover) JobEnded: {'identifier': 'mover', 'rc': 1}
+[7.717198] (-) EventReactorShutdown: {}
